@@ -10,9 +10,9 @@ PearHTTP是一款在Android平台上的网络测试请求工具，它支持GET�
 
 ## 下载安装
 
-右侧Releases可直接下载最新版本 -> [Releases]([https://github.com/fukuball/jieba-php](https://github.com/PearNoDec/PearHTTP/releases/))
+右侧Releases可直接下载最新版本 -> [Release]([https://github.com/fukuball/jieba-php](https://github.com/PearNoDec/PearHTTP/releases/))
 
-国内蓝奏下载 -> [提取码：geh6]([https://github.com/fukuball/jieba-php](https://pearno.lanzouj.com/i9oUQ13rc2de))
+国内蓝奏下载 -> [提取码：geh6](https://pearno.lanzouj.com/i9oUQ13rc2de)
 
 ## 自行部署
 
