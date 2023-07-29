@@ -18,6 +18,8 @@ PearHTTP是一款在Android平台上的网络测试请求工具，它支持GET�
 
 本开源项目中的main.lua即为lua源代码,自行下载打包即可.
 
+![Image text](lang.jpg)
+
 ## 贡献指南
 
 如果你希望对PearHTTP进行贡献，可以按照以下步骤：
