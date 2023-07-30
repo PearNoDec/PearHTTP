@@ -10,9 +10,11 @@ PearHTTP是一款在Android平台上的网络测试请求工具，它支持GET�
 
 ## 下载安装
 
+开源代码可比Releases版本旧,推荐下载最新版
+
 右侧Releases可直接下载最新版本 ->  [Releases](https://github.com/PearNoDec/PearHTTP/releases/)
 
-国内蓝奏下载 -> [提取码：geh6](https://pearno.lanzouj.com/i9oUQ13rc2de)
+国内蓝奏下载 -> [提取码：48bh](https://pearno.lanzouj.com/irBTb13vrajc)
 
 ## 自行部署
 
