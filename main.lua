@@ -22,135 +22,61 @@ local ColorStateList = bindClass "android.content.res.ColorStateList"
 local rippleColor = ColorUtils.blendARGB(0xffffffff, 0xffffffff, 0.32)
 
 Tririum={
-  LinearLayout,
-  orientation='vertical',
-  layout_width='fill',
-  layout_height='fill',
-  background='#FFFFFFFF',
+  ScrollView;
+  layout_width='fill';
+  layout_height='fill';
+  verticalScrollBarEnabled=false;
+  overScrollMode=View.OVER_SCROLL_NEVER,
   {
     LinearLayout,
     orientation='vertical',
     layout_width='fill',
-    layout_height='56dp',
-    gravity='center',
+    layout_height='fill',
     background='#FFFFFFFF',
     {
-      TextView;
-      layout_width='fill';
-      layout_height='wrap';
-      gravity='center';
-      textColor='#FF000000';
-      text='PearHTTP · 网络请求测试工具';
-      textSize='16sp';
-      id="JoinTencent";
-    };
-  };
-  {
-    LinearLayout,
-    orientation="vertical",
-    layout_width="fill",
-    layout_height="wrap",
-    {
       LinearLayout,
-      orientation='horizontal',
+      orientation='vertical',
       layout_width='fill',
-      layout_height='50dp',
+      layout_height='56dp',
+      gravity='center',
       background='#FFFFFFFF',
       {
-        LinearLayout,
-        orientation='vertical',
-        layout_width='180dp',
-        layout_height='50dp',
-        background='',
-        layout_marginLeft='10dp',
-        layout_weight=1,
-        {
-          CoordinatorLayout,
-          layout_width="match",
-          layout_height="match",
-          {
-            MaterialButton,
-            id="choosemodels",
-            layout_gravity = "center",
-            AllCaps = false,
-            BackgroundTintList = ColorStateList({
-              {
-                android.R.attr.state_selected,
-                android.R.attr.state_hovered,
-                android.R.attr.state_focused
-              },
-              {}
-            },
-            {0x881359CE, 0x881359CE, 0x881359CE}),
-            Clickable = true,
-            CornerRadius = "10dp",
-            Elevation = 0,
-            RippleColor = ColorStateList({
-              {
-                android.R.attr.state_selected,
-                android.R.attr.state_hovered,
-                android.R.attr.state_focused},
-              {},
-            },
-            {rippleColor, rippleColor, rippleColor}),
-            Text = "GET",
-            TextColor = 0xffffffff,
-          },
-        }
+        TextView;
+        layout_width='fill';
+        layout_height='wrap';
+        gravity='center';
+        textColor='#FF000000';
+        text='PearHTTP · 网络请求测试工具';
+        textSize='16sp';
+        id="JoinTencent";
       };
+    };
+    {
+      LinearLayout,
+      orientation="vertical",
+      layout_width="fill",
+      layout_height="wrap",
       {
         LinearLayout,
         orientation='horizontal',
         layout_width='fill',
         layout_height='50dp',
-        layout_marginLeft='10dp',
-        layout_marginRight='10dp',
-        layout_weight=1,
+        background='#FFFFFFFF',
         {
-          LinearLayout;
-          orientation='vertical';
-          layout_width='fill';
-          layout_height='fill';
-          background='#88D6D6D6';
+          LinearLayout,
+          orientation='vertical',
+          layout_width='180dp',
+          layout_height='50dp',
+          background='',
+          layout_marginLeft='10dp',
           layout_weight=1,
-          layout_marginRight='5dp',
-          padding='3dp';
-          {
-            LinearLayout;
-            orientation='vertical';
-            layout_width='fill';
-            layout_height='fill';
-            background='#ffffff';
-            {
-              EditText;
-              layout_width='fill';
-              layout_height='fill';
-              id='InputUrl';
-              Hint='请输入访问URL';
-              hintTextColor='#FF747474';
-              textSize='14sp';
-              background='#00ffffff';
-              singleLine=true;
-              textColor='#333333';
-              gravity='center';
-            },
-          };
-        };
-        {
-          LinearLayout;
-          orientation='vertical';
-          layout_width='150dp';
-          layout_height='50dp';
-          background='#ffffff';
-          layout_weight=1,
-          layout_marginLeft='5dp',
           {
             CoordinatorLayout,
             layout_width="match",
             layout_height="match",
             {
               MaterialButton,
-              id="SendUrl",
+              id="choosemodels",
               layout_gravity = "center",
               AllCaps = false,
               BackgroundTintList = ColorStateList({
@@ -173,189 +99,118 @@ Tririum={
                 {},
               },
               {rippleColor, rippleColor, rippleColor}),
-              Text = "访问",
+              Text = "GET",
               TextColor = 0xffffffff,
             },
+          }
+        };
+        {
+          LinearLayout,
+          orientation='horizontal',
+          layout_width='fill',
+          layout_height='50dp',
+          layout_marginLeft='10dp',
+          layout_marginRight='10dp',
+          layout_weight=1,
+          {
+            LinearLayout;
+            orientation='vertical';
+            layout_width='fill';
+            layout_height='fill';
+            background='#88D6D6D6';
+            layout_weight=1,
+            layout_marginRight='5dp',
+            padding='3dp';
+            {
+              LinearLayout;
+              orientation='vertical';
+              layout_width='fill';
+              layout_height='fill';
+              background='#ffffff';
+              {
+                EditText;
+                layout_width='fill';
+                layout_height='fill';
+                id='InputUrl';
+                Hint='请输入访问URL';
+                hintTextColor='#FF747474';
+                textSize='14sp';
+                background='#00ffffff';
+                singleLine=true;
+                textColor='#333333';
+                gravity='center';
+              },
+            };
+          };
+          {
+            LinearLayout;
+            orientation='vertical';
+            layout_width='150dp';
+            layout_height='50dp';
+            background='#ffffff';
+            layout_weight=1,
+            layout_marginLeft='5dp',
+            {
+              CoordinatorLayout,
+              layout_width="match",
+              layout_height="match",
+              {
+                MaterialButton,
+                id="SendUrl",
+                layout_gravity = "center",
+                AllCaps = false,
+                BackgroundTintList = ColorStateList({
+                  {
+                    android.R.attr.state_selected,
+                    android.R.attr.state_hovered,
+                    android.R.attr.state_focused
+                  },
+                  {}
+                },
+                {0x881359CE, 0x881359CE, 0x881359CE}),
+                Clickable = true,
+                CornerRadius = "10dp",
+                Elevation = 0,
+                RippleColor = ColorStateList({
+                  {
+                    android.R.attr.state_selected,
+                    android.R.attr.state_hovered,
+                    android.R.attr.state_focused},
+                  {},
+                },
+                {rippleColor, rippleColor, rippleColor}),
+                Text = "访问",
+                TextColor = 0xffffffff,
+              },
+            };
           };
         };
       };
-    };
-    {
-      LinearLayout,
-      orientation="vertical",
-      layout_width="fill",
-      layout_height="fill",
-      layout_marginTop="5dp",
       {
-        TextView;
-        layout_width='fill';
-        layout_height='fill';
-        textColor='#FF000000';
-        layout_marginLeft='10dp';
-        text='协议请求头(key:value):';
-        textSize='14sp';
-      };
-      {
-        LinearLayout;
-        orientation='vertical';
-        layout_width='fill';
-        layout_height='fill';
-        background='#88D6D6D6';
-        layout_marginLeft='10dp';
-        layout_marginRight='10dp';
+        LinearLayout,
+        orientation="vertical",
+        layout_width="fill",
+        layout_height="fill",
         layout_marginTop="5dp",
-        padding='3dp';
+        {
+          TextView;
+          layout_width='fill';
+          layout_height='fill';
+          textColor='#FF000000';
+          layout_marginLeft='10dp';
+          text='协议请求头(key:value):';
+          textSize='14sp';
+        };
         {
           LinearLayout;
           orientation='vertical';
           layout_width='fill';
           layout_height='fill';
-          background='#ffffffff';
-          {
-            EditText;
-            layout_width='fill';
-            layout_height='fill';
-            id='HeadersEdit';
-            background='#00ffffff';
-            hintTextColor='#FF747474';
-            textSize='14sp';
-            minLines=3;
-            textColor='#333333';
-            layout_margin='5dp';
-            gravity='left|center';
-            MaxLines=3;
-          }
-        };
-      };
-    };
-    {
-      LinearLayout,
-      orientation="vertical",
-      layout_width="fill",
-      layout_height="fill",
-      layout_marginTop="5dp",
-      {
-        TextView;
-        layout_width='fill';
-        layout_height='fill';
-        textColor='#FF000000';
-        layout_marginLeft='10dp';
-        text='POST参数:';
-        textSize='14sp';
-      };
-      {
-        LinearLayout;
-        orientation='vertical';
-        layout_width='fill';
-        layout_height='fill';
-        background='#88D6D6D6';
-        layout_marginLeft='10dp';
-        padding='3dp';
-        layout_marginRight='10dp';
-        layout_marginTop="5dp",
-        {
-          LinearLayout;
-          orientation='vertical';
-          layout_width='fill';
-          layout_height='fill';
-          background='#ffffffff';
-          {
-            EditText;
-            layout_width='fill';
-            layout_height='fill';
-            id='PostEdit';
-            background='#00ffffff';
-            hintTextColor='#FF747474';
-            textSize='14sp';
-            minLines=2;
-            textColor='#333333';
-            layout_margin='5dp';
-            gravity='left|center';
-            MaxLines=2;
-          }
-        };
-      };
-    };
-    {
-      LinearLayout,
-      orientation="vertical",
-      layout_width="fill",
-      layout_height="fill",
-      layout_marginTop="5dp",
-      {
-        TextView;
-        layout_width='fill';
-        layout_height='fill';
-        textColor='#FF000000';
-        layout_marginLeft='10dp';
-        text='Cookie参数:';
-        textSize='14sp';
-      };
-      {
-        LinearLayout;
-        orientation='vertical';
-        layout_width='fill';
-        layout_height='fill';
-        background='#88D6D6D6';
-        layout_marginLeft='10dp';
-        padding='3dp';
-        layout_marginRight='10dp';
-        layout_marginTop="5dp",
-        {
-          LinearLayout;
-          orientation='vertical';
-          layout_width='fill';
-          layout_height='fill';
-          background='#ffffffff';
-          {
-            EditText;
-            layout_width='fill';
-            layout_height='fill';
-            id='CookieEdit';
-            background='#00ffffff';
-            hintTextColor='#FF747474';
-            textSize='14sp';
-            minLines=2;
-            textColor='#333333';
-            layout_margin='5dp';
-            gravity='left|center';
-            MaxLines=2;
-          }
-        };
-      };
-    };
-    {
-      LinearLayout,
-      orientation="vertical",
-      layout_width="fill",
-      layout_height="fill",
-      layout_marginTop="5dp",
-      {
-        TextView;
-        layout_width='fill';
-        layout_height='fill';
-        textColor='#FF000000';
-        layout_marginLeft='10dp';
-        id='ResultCode';
-        text='返回结果:';
-        textSize='14sp';
-      };
-      {
-        LinearLayout;
-        orientation='vertical';
-        layout_width='fill';
-        layout_height='fill';
-        background='#88D6D6D6';
-        layout_marginLeft='10dp';
-        padding='3dp';
-        layout_marginRight='10dp';
-        layout_marginTop="5dp",
-        {
-          ScrollView;
-          layout_width='fill';
-          layout_height='fill';
-          verticalScrollBarEnabled=false;
-          overScrollMode=View.OVER_SCROLL_NEVER,
+          background='#88D6D6D6';
+          layout_marginLeft='10dp';
+          layout_marginRight='10dp';
+          layout_marginTop="5dp",
+          padding='3dp';
           {
             LinearLayout;
             orientation='vertical';
@@ -363,17 +218,169 @@ Tririum={
             layout_height='fill';
             background='#ffffffff';
             {
-            TextView;
+              EditText;
+              layout_width='fill';
+              layout_height='fill';
+              id='HeadersEdit';
+              background='#00ffffff';
+              hintTextColor='#FF747474';
+              textSize='14sp';
+              minLines=3;
+              textColor='#333333';
+              layout_margin='5dp';
+              gravity='left|center';
+              MaxLines=3;
+            }
+          };
+        };
+      };
+      {
+        LinearLayout,
+        orientation="vertical",
+        layout_width="fill",
+        layout_height="fill",
+        layout_marginTop="5dp",
+        {
+          TextView;
+          layout_width='fill';
+          layout_height='fill';
+          textColor='#FF000000';
+          layout_marginLeft='10dp';
+          text='POST参数:';
+          textSize='14sp';
+        };
+        {
+          LinearLayout;
+          orientation='vertical';
+          layout_width='fill';
+          layout_height='fill';
+          background='#88D6D6D6';
+          layout_marginLeft='10dp';
+          padding='3dp';
+          layout_marginRight='10dp';
+          layout_marginTop="5dp",
+          {
+            LinearLayout;
+            orientation='vertical';
             layout_width='fill';
             layout_height='fill';
-            text='';
-            textSize='14sp';
-            textColor='#333333';
-            id='ResultEdit';
-            textIsSelectable=true;
-            layout_margin="5dp";
-            Typeface=Typeface.DEFAULT;
-            gravity='left';
+            background='#ffffffff';
+            {
+              EditText;
+              layout_width='fill';
+              layout_height='fill';
+              id='PostEdit';
+              background='#00ffffff';
+              hintTextColor='#FF747474';
+              textSize='14sp';
+              minLines=2;
+              textColor='#333333';
+              layout_margin='5dp';
+              gravity='left|center';
+              MaxLines=2;
+            }
+          };
+        };
+      };
+      {
+        LinearLayout,
+        orientation="vertical",
+        layout_width="fill",
+        layout_height="fill",
+        layout_marginTop="5dp",
+        {
+          TextView;
+          layout_width='fill';
+          layout_height='fill';
+          textColor='#FF000000';
+          layout_marginLeft='10dp';
+          text='Cookie参数:';
+          textSize='14sp';
+        };
+        {
+          LinearLayout;
+          orientation='vertical';
+          layout_width='fill';
+          layout_height='fill';
+          background='#88D6D6D6';
+          layout_marginLeft='10dp';
+          padding='3dp';
+          layout_marginRight='10dp';
+          layout_marginTop="5dp",
+          {
+            LinearLayout;
+            orientation='vertical';
+            layout_width='fill';
+            layout_height='fill';
+            background='#ffffffff';
+            {
+              EditText;
+              layout_width='fill';
+              layout_height='fill';
+              id='CookieEdit';
+              background='#00ffffff';
+              hintTextColor='#FF747474';
+              textSize='14sp';
+              minLines=2;
+              textColor='#333333';
+              layout_margin='5dp';
+              gravity='left|center';
+              MaxLines=2;
+            }
+          };
+        };
+      };
+      {
+        LinearLayout,
+        orientation="vertical",
+        layout_width="fill",
+        layout_height="fill",
+        layout_marginTop="5dp",
+        {
+          TextView;
+          layout_width='fill';
+          layout_height='fill';
+          textColor='#FF000000';
+          layout_marginLeft='10dp';
+          id='ResultCode';
+          text='返回结果:';
+          textSize='14sp';
+        };
+        {
+          LinearLayout;
+          orientation='vertical';
+          layout_width='fill';
+          layout_height='fill';
+          background='#88D6D6D6';
+          layout_marginLeft='10dp';
+          padding='3dp';
+          layout_marginRight='10dp';
+          layout_marginTop="5dp",
+          {
+            ScrollView;
+            layout_width='fill';
+            layout_height='fill';
+            verticalScrollBarEnabled=false;
+            overScrollMode=View.OVER_SCROLL_NEVER,
+            {
+              LinearLayout;
+              orientation='vertical';
+              layout_width='fill';
+              layout_height='fill';
+              background='#ffffffff';
+              {
+              TextView;
+              layout_width='fill';
+              layout_height='fill';
+              text='';
+              textSize='14sp';
+              textColor='#333333';
+              id='ResultEdit';
+              textIsSelectable=true;
+              layout_margin="5dp";
+              Typeface=Typeface.DEFAULT;
+              gravity='left';
+              };
             };
           };
         };
