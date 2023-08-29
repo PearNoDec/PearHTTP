@@ -21,8 +21,6 @@ PearHTTP是一款在Android平台上的网络测试请求工具，它支持GET�
 
 本开源项目中以Andlua与FasionAPP2进行打包安装，需要的可自行部署学习
 
-![Image text](icon.png)
-
 ![Image text](info.png)
 
 ## 贡献指南
