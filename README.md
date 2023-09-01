@@ -23,7 +23,9 @@ For domestic users in China, download here -> [Access Code: eqbb](https://pearno
 
 This open-source project is packaged with Andlua and FasionAPP2. If interested, you can self-deploy for learning purposes.
 
-![Information](info.png)
+![Information](firstone.png)
+
+![Information](firsttwo.png)
 
 ## Contribution Guidelines
 
